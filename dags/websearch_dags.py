@@ -296,7 +296,7 @@ with DAG(
 
     t_end = EmptyOperator(task_id="end_message")
 
-    (t1 >> newsearch_api()
-        >> download_files_gcs()
-        >> score_df()
-        >> t_end)
+    # (t1 >> newsearch_api()
+    #     >> download_files_gcs()
+    #     >> score_df()
+    #     >> t_end)
