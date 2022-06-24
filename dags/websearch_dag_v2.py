@@ -368,5 +368,5 @@ with DAG(
 
     end_dags = EmptyOperator(task_id="dags_end", dag=dag)
 
-    chain(t1, combine_validate(), t_combined, [uploads_valid(),  uploads_invalid()], [scores_uploads(), load_invalid_bq], [load_valid_bq, invalidbq], end_dags)
+    chain(t1, websearch_upload(), combine_validate(), t_combined, [uploads_valid(),  uploads_invalid()], [scores_uploads(), load_invalid_bq], [load_valid_bq, invalidbq], end_dags)
 
