@@ -34,7 +34,7 @@ The DAGs and functions that are used in this project are in `dags/websearch_dag_
 - Data Validation
 - Sentiment Analysis (Spacy, SpacyTextBlob)
 
-You can also increase the number of searched news by updating `page_size` in the query parameters.
+You can also increase the number of searched news by updating page size in the query parameters. More details are available in dags/websearch_dag_v2.py.
 
 ## Dags Tasks
 It receives data from the API Endpoint and uploads it to GCS. Combines and validates the data then splits the dataset into **valid** and **invalid** datasets and uploads it to their respective folders in GCS. **Valid** data are then scored based on `spacytextblob` for sentiment analysis and generate a **scored** file. The results of the sentiment analysis are then uploaded to GCS. Both **scored** and **invalid** datasets are then transferred to GCP BigQuery.
