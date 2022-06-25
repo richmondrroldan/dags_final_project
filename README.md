@@ -31,6 +31,8 @@ The DAGs and functions that are used in this project are in `dags/websearch_dag_
 - API Calls
 - GCS Access (Upload/Grab Files)
 - GCP BigQuery (GCS to BigQuery)
+- Data Validation
+- Sentiment Analysis (Spacy, SpacyTextBlob)
 
 You can also increase the number of searched news by updating `page_size` in the query parameters.
 
@@ -41,7 +43,7 @@ It receives data from the API Endpoint and uploads it to GCS. Combines and valid
 Setting up Docker and Airflow is the biggest challenge of this project.
 
 ## Project Improvement
-Optimizing the current process on the DAGs used. Improving current data validations. Using other NLP methods to come up with a better and more insightful dataset.
+Optimizing the current process on the DAGs used. Improving current data validations. Using other NLP(NER, Wordcount) methods to come up with a better and more insightful dataset. Infusing more data sources.
 
 ## Areas to learn
 Setting up the `docker-compose.yaml`. Getting more familiar with all the technologies used in this project.
